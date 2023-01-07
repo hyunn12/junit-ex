@@ -30,3 +30,15 @@
 - AssertJ 는 체이닝 방식을 사용해서 `asserThat().isEqualTo()` 처럼 사용해 좀 더 작관적으로 표현가능
 - SpringBoot 사용 시 `spring-boot-starter-test` 를 주로 사용하는데 여기에 AssertJ가 포함되어있어 따로 라이브러리를 포함할 필요가 없음
 
+----
+
+## 2. JUnit 진짜로 써 보기
+
+### `@BeforeEach` vs `@BeforeAll`
+- `@BeforeAll`
+  - 한 테스트클래스 자체를 실행 시에 처음 딱 한번만 실행
+  - 비용이 많이 드는 초기 설정에 이용하면 좋음 
+  - 초기 한번만 실행되므로 static 메소드여야함
+
+- `@BeforeEach`
+  - 한 테스트 클래스 내의 각 메소드가 실행될 때마다 매번 먼저 실행됨
